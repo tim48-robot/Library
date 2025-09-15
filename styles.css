@@ -9,6 +9,9 @@ html {
     line-height: 1.6;
 }
 
+.weighted{
+    font-weight: 600;
+}
 
 div#container{
     display:flex;
@@ -17,6 +20,23 @@ div#container{
     align-items: center;
 }
 
+div#gridcontainer{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+
 div.bookCard{
+    padding: 20px;
+    position: relative;
     border: 2px solid black;
+}
+
+svg.svgResize{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
 }
