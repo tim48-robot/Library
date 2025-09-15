@@ -15,14 +15,22 @@
             
             
         </div>
+
         <dialog>
-            <form>
+            <form method="dialog">
+                <label for="bookName">Book Name: </label>
+                <input type="text" id="bookName" name="bookName" required>
+                <label for="bookAuthor">Author: </label>
+                <input id="bookAuthor" type="text" name="bookAuthor" required>
 
 
+                <button id="confirmForm">Confirm</button>
             </form>
-        </dialog>
-        <button id="showDialog">Create New Book</button>
 
+        </dialog>
+
+        <button id="showDialog">Create New Book</button>
+       
     </div>
     
 

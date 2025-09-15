@@ -48,6 +48,10 @@ svg.svgResize{
     cursor:pointer;
 }
 
+svg.readed{
+    right:40px;
+}
+
 svg:hover{
     transform: scale(1.2);
 }
@@ -60,3 +64,26 @@ button#showDialog{
     cursor: pointer;
 }
 
+dialog{
+    margin: auto;
+}
+
+::backdrop {
+  background-image: linear-gradient(
+    45deg, red, blue, yellow
+  );
+  opacity: 0.85;
+}
+
+form[method="dialog"]{
+    padding: 30px;
+}
+
+button#confirmForm, label:not(label[for="bookName"]){
+    margin-top: 20px;
+}
+
+form[method="dialog"]{
+    display:flex;
+    flex-direction: column;
+}
