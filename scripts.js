@@ -12,8 +12,16 @@ function createAddBook(name, author, arrayName){
     arrayName.push(book);
 }
 
+
 createAddBook("The way of making friends", "justin", myLibrary);
 createAddBook("The way of making enemies", "Sun Tzu", myLibrary);
+createAddBook("The way of making friends", "justin", myLibrary);
+createAddBook("The way of making enemies", "Sun Tzu", myLibrary);
+createAddBook("The way of making friends", "justin", myLibrary);
+createAddBook("The way of making enemies", "Sun Tzu", myLibrary);
+
+
+
 
 for (let i=0; i<myLibrary.length; i++){
     let newDiv = document.createElement("div");

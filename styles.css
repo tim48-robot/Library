@@ -16,13 +16,18 @@ html {
 div#container{
     display:flex;
     height: 100vh;
+    gap: 20px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 div#gridcontainer{
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    width: 80vw; /*for this part, not setting the width would make it go content based or auto. except if implicitly stated that per row wants how much column. auto-fit would make it 1. */
+    /* the reason being this is a flex item and therefore you need to specify the flex-grow. if not this will be content based*/
+    /* flex-grow: 1;  this would work only on the main axis */
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
     grid-template-rows: auto;
     gap: 1rem;
 }
@@ -38,5 +43,20 @@ svg.svgResize{
     height: 20px;
     position: absolute;
     bottom: 5px;
+    transition: transform 0.3s ease;
     right: 5px;
+    cursor:pointer;
 }
+
+svg:hover{
+    transform: scale(1.2);
+}
+
+button#showDialog{
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 20px;
+    color: blue;
+    cursor: pointer;
+}
+
